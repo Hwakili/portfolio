@@ -1,32 +1,32 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Globe } from 'lucide-react'
 import { projects } from '../data/content'
 import { GithubIcon } from './icons'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
 
 function ProjectCard({ project, delay }: { project: (typeof projects)[number]; delay: number }) {
-  const Wrapper = project.link ? 'a' : 'div'
-  const linkProps = project.link
-    ? { href: project.link, target: '_blank', rel: 'noreferrer' }
-    : {}
-
   return (
     <Reveal delay={delay}>
-      <Wrapper
-        {...linkProps}
-        className={`group flex h-full flex-col rounded-2xl border border-border p-6 transition-colors ${
-          project.link ? 'hover:border-accent' : ''
-        } ${project.featured ? 'bg-bg-elevated' : ''}`}
+      <div
+        className={`flex h-full flex-col rounded-2xl border border-border p-6 ${
+          project.featured ? 'bg-bg-elevated' : ''
+        }`}
       >
         <div className="flex items-start justify-between gap-3">
           <span className="font-mono text-xs uppercase tracking-wide text-accent">
             {project.category}
           </span>
           {project.link ? (
-            <span className="flex items-center gap-1 text-text-muted transition-colors group-hover:text-accent">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View on GitHub"
+              className="flex items-center gap-1 text-text-muted transition-colors hover:text-accent"
+            >
               <GithubIcon size={14} />
               <ArrowUpRight size={14} />
-            </span>
+            </a>
           ) : (
             <span className="text-xs text-text-muted">Academic</span>
           )}
@@ -46,7 +46,19 @@ function ProjectCard({ project, delay }: { project: (typeof projects)[number]; d
             </span>
           ))}
         </div>
-      </Wrapper>
+
+        {project.homepage && (
+          <a
+            href={project.homepage}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex items-center gap-1.5 text-xs text-accent hover:underline"
+          >
+            <Globe size={13} />
+            {project.homepage.replace(/^https?:\/\//, '')}
+          </a>
+        )}
+      </div>
     </Reveal>
   )
 }

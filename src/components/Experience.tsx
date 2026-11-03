@@ -1,3 +1,4 @@
+import { ArrowUpRight } from 'lucide-react'
 import { experience } from '../data/content'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
@@ -21,7 +22,19 @@ export function Experience() {
               <h3 className="text-lg font-medium text-heading">{item.role}</h3>
               <span className="font-mono text-xs text-text-muted">{item.period}</span>
             </div>
-            <p className="mt-1 text-sm text-accent">{item.org}</p>
+            {item.url ? (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-1 inline-flex items-center gap-1 text-sm text-accent hover:underline"
+              >
+                {item.org}
+                <ArrowUpRight size={13} />
+              </a>
+            ) : (
+              <p className="mt-1 text-sm text-accent">{item.org}</p>
+            )}
             <ul className="mt-3 space-y-2">
               {item.bullets.map((bullet) => (
                 <li key={bullet} className="flex gap-2 text-sm text-text-muted">

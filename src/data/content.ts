@@ -18,6 +18,7 @@ export type ExperienceEntry = {
   period: string
   bullets: string[]
   current?: boolean
+  url?: string
 }
 
 export const experience: ExperienceEntry[] = [
@@ -37,10 +38,12 @@ export const experience: ExperienceEntry[] = [
     org: 'Sickle Shield (Registered UK Charity / CIO)',
     period: '2026 – Present',
     current: true,
+    url: 'https://www.sickleshield.com',
     bullets: [
-      'Lead the end-to-end strategic and technical direction of a digital health organisation focused on sickle cell disease management.',
-      'Engineered and architected a mobile patient-management application for symptom tracking and a specialised drug analysis web application to analyse treatment interactions.',
-      'Drive product development cycles, secure system architecture, and manage compliance frameworks for digital health deployment.',
+      'Founded and lead a digital health organisation for sickle cell disease (SCD) management, now supporting 100+ warriors and families with crisis prevention tools, health education, and peer community.',
+      'Designed and built the Sickle Shield app end-to-end: a native SwiftUI iOS app (crisis tracking with pain-trend history, medication reminders, medical report storage, and a live-location SOS flow) backed by a Node.js/Express/Prisma REST API.',
+      'Security-hardened the backend as both founder and engineer — fixing IDOR vulnerabilities, removing hardcoded secrets, and correcting data-modelling flaws in crisis-logging — applying the same VAPT discipline from my day job to my own product.',
+      'Drive product strategy, fundraising, and compliance (data protection for health records) as CEO, while writing the majority of the codebase myself.',
     ],
   },
   {
@@ -120,10 +123,11 @@ export const skills = {
     'Nmap',
     'ISO/IEC 27005 Risk Assessment',
   ],
-  'Product Engineering': [
-    'Full-stack Web/Mobile Architecture',
-    'System Design',
-    'Secure Data Management',
+  'Health Tech & Product Engineering': [
+    'SwiftUI (iOS)',
+    'Node.js / Express / TypeScript',
+    'Prisma / PostgreSQL',
+    'REST API Design & JWT Auth',
     'Python',
     'Bash Scripting',
   ],
@@ -142,7 +146,7 @@ export const certifications = [
 
 export const highlights = [
   { stat: '15+', label: 'High-risk vulnerabilities identified in VAPT engagements' },
-  { stat: '1', label: 'UK charity founded & led as CEO (Sickle Shield)' },
+  { stat: '100+', label: 'Warriors & families supported by Sickle Shield, the charity I founded and built' },
   { stat: '400+', label: 'Enterprise support requests resolved monthly' },
   { stat: 'Nat’l', label: 'Co-author on NIHR-backed research, presented at ASCAT 2026' },
 ]
@@ -152,13 +156,33 @@ export type ProjectEntry = {
   period: string
   description: string
   tags: string[]
-  category: 'Security' | 'AI/ML' | 'Cryptography' | 'Forensics' | 'Systems' | 'Entrepreneurship'
+  category:
+    | 'Security'
+    | 'AI/ML'
+    | 'Cryptography'
+    | 'Forensics'
+    | 'Systems'
+    | 'Entrepreneurship'
+    | 'Health Tech'
   link?: string
+  homepage?: string
   source: 'GitHub' | 'Academic'
   featured?: boolean
 }
 
 export const projects: ProjectEntry[] = [
+  {
+    title: 'Sickle Shield — iOS App & Backend',
+    period: '2026 – Present',
+    description:
+      'The product behind the charity I founded: a native SwiftUI companion app for people living with sickle cell disease, backed by a Node.js/Express/Prisma REST API. Crisis tracking with pain-trend history, medication reminders, medical report storage, and a live-location emergency SOS flow. I wrote the majority of the codebase and security-hardened the backend — fixing IDOR vulnerabilities and removing hardcoded secrets.',
+    tags: ['SwiftUI', 'Node.js', 'Prisma', 'PostgreSQL', 'Security Hardening'],
+    category: 'Health Tech',
+    link: 'https://github.com/SickleShield-lab/sickle-shield-app',
+    homepage: 'https://www.sickleshield.com',
+    source: 'GitHub',
+    featured: true,
+  },
   {
     title: 'AI for Fraud Detection in Financial Transactions',
     period: '2026',
@@ -189,7 +213,6 @@ export const projects: ProjectEntry[] = [
     tags: ['ISO/IEC 27005', 'Risk Assessment', 'Compliance'],
     category: 'Security',
     source: 'Academic',
-    featured: true,
   },
   {
     title: 'HackLab: Vulnix — Boot-to-Root Penetration Test',
