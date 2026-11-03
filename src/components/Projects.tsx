@@ -1,0 +1,93 @@
+import { ArrowUpRight } from 'lucide-react'
+import { projects } from '../data/content'
+import { GithubIcon } from './icons'
+import { Reveal } from './Reveal'
+import { SectionHeading } from './SectionHeading'
+
+function ProjectCard({ project, delay }: { project: (typeof projects)[number]; delay: number }) {
+  const Wrapper = project.link ? 'a' : 'div'
+  const linkProps = project.link
+    ? { href: project.link, target: '_blank', rel: 'noreferrer' }
+    : {}
+
+  return (
+    <Reveal delay={delay}>
+      <Wrapper
+        {...linkProps}
+        className={`group flex h-full flex-col rounded-2xl border border-border p-6 transition-colors ${
+          project.link ? 'hover:border-accent' : ''
+        } ${project.featured ? 'bg-bg-elevated' : ''}`}
+      >
+        <div className="flex items-start justify-between gap-3">
+          <span className="font-mono text-xs uppercase tracking-wide text-accent">
+            {project.category}
+          </span>
+          {project.link ? (
+            <span className="flex items-center gap-1 text-text-muted transition-colors group-hover:text-accent">
+              <GithubIcon size={14} />
+              <ArrowUpRight size={14} />
+            </span>
+          ) : (
+            <span className="text-xs text-text-muted">Academic</span>
+          )}
+        </div>
+
+        <h3 className="mt-3 text-base font-medium text-heading">{project.title}</h3>
+        <p className="mt-1 font-mono text-xs text-text-muted">{project.period}</p>
+        <p className="mt-3 flex-1 text-sm text-text-muted">{project.description}</p>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-border px-2.5 py-0.5 text-xs text-text-muted"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </Wrapper>
+    </Reveal>
+  )
+}
+
+export function Projects() {
+  const featured = projects.filter((p) => p.featured)
+  const rest = projects.filter((p) => !p.featured)
+
+  return (
+    <section id="projects" className="border-t border-border mx-auto max-w-5xl px-6 py-24">
+      <Reveal>
+        <SectionHeading
+          eyebrow="Build & Break"
+          title="Projects"
+        />
+      </Reveal>
+
+      <div className="grid gap-6 sm:grid-cols-3">
+        {featured.map((project, i) => (
+          <ProjectCard key={project.title} project={project} delay={i * 0.05} />
+        ))}
+      </div>
+
+      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {rest.map((project, i) => (
+          <ProjectCard key={project.title} project={project} delay={i * 0.04} />
+        ))}
+      </div>
+
+      <Reveal className="mt-8 text-center">
+        <a
+          href="https://github.com/Hwakili"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-accent"
+        >
+          <GithubIcon size={16} />
+          View all repositories on GitHub
+          <ArrowUpRight size={14} />
+        </a>
+      </Reveal>
+    </section>
+  )
+}

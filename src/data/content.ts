@@ -130,12 +130,130 @@ export const skills = {
 }
 
 export const certifications = [
-  'ISC2 CC',
-  'CompTIA Security+ (Ongoing)',
-  'CEH (Ongoing)',
-  'CompTIA A+',
+  'Jamf Certified Associate',
+  'SOC Level 1 (TryHackMe)',
+  'Certified in Cybersecurity (ISC2 CC)',
   'ITIL Foundation',
   'Cisco Cyber Threat Management',
-  'Google IT Support Fundamentals',
-  'Microsoft Office Specialist',
+  'ITXM Professional',
+  'CompTIA Security+ (In Progress)',
+  'CEH (In Progress)',
+]
+
+export const highlights = [
+  { stat: '15+', label: 'High-risk vulnerabilities identified in VAPT engagements' },
+  { stat: '1', label: 'UK charity founded & led as CEO (Sickle Shield)' },
+  { stat: '400+', label: 'Enterprise support requests resolved monthly' },
+  { stat: 'Nat’l', label: 'Co-author on NIHR-backed research, presented at ASCAT 2026' },
+]
+
+export type ProjectEntry = {
+  title: string
+  period: string
+  description: string
+  tags: string[]
+  category: 'Security' | 'AI/ML' | 'Cryptography' | 'Forensics' | 'Systems' | 'Entrepreneurship'
+  link?: string
+  source: 'GitHub' | 'Academic'
+  featured?: boolean
+}
+
+export const projects: ProjectEntry[] = [
+  {
+    title: 'AI for Fraud Detection in Financial Transactions',
+    period: '2026',
+    description:
+      'MSc dissertation developing and critically comparing AI models — Logistic Regression, Random Forest, XGBoost, and a custom ResNeXt-embedded GRU architecture — for detecting fraudulent card transactions under severe class imbalance, with explainability via SHAP/LIME and a focus on real-time deployment feasibility.',
+    tags: ['Python', 'XGBoost', 'Deep Learning', 'SHAP/LIME'],
+    category: 'AI/ML',
+    link: 'https://github.com/Hwakili/ai-financial-fraud-detection',
+    source: 'GitHub',
+    featured: true,
+  },
+  {
+    title: 'Secure Storage with ChaCha20-Poly1305',
+    period: '2026',
+    description:
+      'Encrypted file/folder storage and backup system built on ChaCha20-Poly1305 authenticated encryption with X25519 asymmetric key exchange and HKDF/SHA-256 key derivation. Supports multi-user controlled key sharing, digital signatures, and an explicit tamper-detection test.',
+    tags: ['Python', 'Cryptography', 'X25519', 'Digital Signatures'],
+    category: 'Cryptography',
+    link: 'https://github.com/Hwakili/ChaCha20_Poly1305-Secure-Storage',
+    source: 'GitHub',
+    featured: true,
+  },
+  {
+    title: 'ISMS Risk Assessment Report (ISO/IEC 27005:2018)',
+    period: '2023',
+    description:
+      'Built an Information Security Management System risk assessment for a simulated financial institution — asset identification, threat/risk analysis, and treatment planning — with incident response strategies to strengthen compliance and security culture.',
+    tags: ['ISO/IEC 27005', 'Risk Assessment', 'Compliance'],
+    category: 'Security',
+    source: 'Academic',
+    featured: true,
+  },
+  {
+    title: 'HackLab: Vulnix — Boot-to-Root Penetration Test',
+    period: '2025',
+    description:
+      'Full penetration test of the Vulnix VulnHub machine: service enumeration, exploitation of NFS misconfigurations to gain an initial foothold, and privilege escalation to root — replicating real-world Linux attack paths end to end.',
+    tags: ['Kali Linux', 'Enumeration', 'Privilege Escalation'],
+    category: 'Security',
+    link: 'https://github.com/Hwakili/Hacklab-Vulnix',
+    source: 'GitHub',
+  },
+  {
+    title: 'Penetration Test — Starlink / SpaceX Infrastructure',
+    period: '2022',
+    description:
+      'Assessed the security posture of Starlink’s satellite internet infrastructure through network and system scans, exploit attempts against identified weaknesses, and a report of actionable hardening recommendations.',
+    tags: ['VMware', 'Kali Linux', 'Network Security'],
+    category: 'Security',
+    source: 'Academic',
+  },
+  {
+    title: 'Social Engineering — Credential Harvesting Simulation',
+    period: '2025',
+    description:
+      'Simulated a phishing-based credential harvesting attack using the Social-Engineer Toolkit (SET) on Kali Linux, demonstrating how attackers exploit human trust and documenting the technique for defensive awareness training.',
+    tags: ['Kali Linux', 'SET', 'Phishing'],
+    category: 'Security',
+    link: 'https://github.com/Hwakili/Social_Engineering',
+    source: 'GitHub',
+  },
+  {
+    title: 'Digital Forensics: Forensic Case Study Investigation',
+    period: '2023',
+    description:
+      'Forensic analysis of a simulated cybercrime case — recovering deleted files, tracing data footprints, and identifying perpetrators using EnCase, Autopsy, VeraCrypt, OpenStego, Sonic Visualiser, and VMware — reported to professional evidentiary standards.',
+    tags: ['EnCase', 'Autopsy', 'VeraCrypt'],
+    category: 'Forensics',
+    source: 'Academic',
+  },
+  {
+    title: 'Dissertation: The Role of AI in Cyber Security',
+    period: '2023',
+    description:
+      'BSc dissertation examining AI’s role in threat detection and automated defence, weighed against ethical concerns, data privacy, and adversarial AI risks — proposing strategies for safer AI-driven security systems.',
+    tags: ['Academic Research', 'AI Ethics'],
+    category: 'AI/ML',
+    source: 'Academic',
+  },
+  {
+    title: 'Double Error Correction — BCH(10,6)',
+    period: '2022',
+    description:
+      'Python implementation of a BCH(10,6) error-correction codec: a generator that appends check digits to a codeword, and a decoder that detects and corrects single and double bit errors for data-integrity guarantees.',
+    tags: ['Python', 'Error Correction', 'Algorithms'],
+    category: 'Systems',
+    source: 'Academic',
+  },
+  {
+    title: 'Wister Wipers — Business Venture',
+    period: '2022 – 2023',
+    description:
+      'Co-led an 8-month venture-building project from concept to investor pitch: a smartphone-controlled portable heater for older vehicles, including a working prototype, business model canvas, pitch deck, and final investor presentation.',
+    tags: ['Product Strategy', 'Pitching', 'Prototyping'],
+    category: 'Entrepreneurship',
+    source: 'Academic',
+  },
 ]
