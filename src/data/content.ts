@@ -86,6 +86,16 @@ export const research: ResearchEntry[] = [
       'Co-authored research outputs selected and presented at the ASCAT 2026 Conference (21st Annual Sickle Cell & Thalassaemia Conference) in London.',
     ],
   },
+  {
+    role: 'Sickle Cell Working Group for Schools — Member',
+    org: 'NHS England, Sickle Cell and Thalassaemia Quality Improvement Programme',
+    period: 'August 2025 – Present',
+    bullets: [
+      'Invited by NHS England’s Sickle Cell & Thalassaemia Clinical Fellow after she identified Sickle Shield during a national review of applicants, to explore collaboration between the charity and NHS England’s education programme.',
+      'Selected to join the Sickle Cell Working Group for Schools, contributing alongside affected individuals, patients, carers, educators and healthcare professionals to develop national resources supporting pupils with the condition.',
+      'Contributed to the NHS England Sickle Cell and Thalassaemia National Resource for Schools and Educators, soft-launched on World Sickle Cell Day (June 2026) ahead of a September 2026 national rollout spanning early years, primary, secondary and higher education.',
+    ],
+  },
 ]
 
 export const education = [
