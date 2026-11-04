@@ -1,14 +1,14 @@
-import { Menu, X } from 'lucide-react'
+import { Briefcase, FlaskConical, FolderGit2, Mail, Menu, Wrench, X } from 'lucide-react'
 import { useState } from 'react'
 import { profile } from '../data/content'
 import { GithubIcon, LinkedinIcon } from './icons'
 
 const links = [
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#research', label: 'Research' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#experience', label: 'Experience', icon: Briefcase },
+  { href: '#projects', label: 'Projects', icon: FolderGit2 },
+  { href: '#research', label: 'Research', icon: FlaskConical },
+  { href: '#skills', label: 'Skills', icon: Wrench },
+  { href: '#contact', label: 'Contact', icon: Mail },
 ]
 
 export function Nav() {
@@ -24,16 +24,19 @@ export function Nav() {
           hamza<span className="text-accent">.wakili</span>
         </a>
 
-        <div className="hidden items-center gap-8 sm:flex">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-xs font-medium uppercase tracking-wide text-text-muted transition-colors hover:text-accent"
-            >
-              {link.label}
-            </a>
-          ))}
+        <div className="hidden items-center gap-6 sm:flex">
+          <div className="flex items-center gap-1 rounded-full border border-border p-1">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium uppercase tracking-wide text-text-muted transition-colors hover:bg-accent-soft hover:text-accent"
+              >
+                <link.icon size={13} />
+                {link.label}
+              </a>
+            ))}
+          </div>
           <div className="flex items-center gap-4">
             <a
               href={profile.github}

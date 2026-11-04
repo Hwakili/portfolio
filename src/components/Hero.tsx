@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { profile } from '../data/content'
 import { Glow } from './Glow'
 import { RoleCycle } from './RoleCycle'
+import { TerminalCard } from './TerminalCard'
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -18,7 +19,7 @@ export function Hero() {
     <section
       id="top"
       ref={sectionRef}
-      className="relative mx-auto flex max-w-5xl flex-col justify-center overflow-hidden px-6 pb-24 pt-20 sm:pt-32 sm:pb-32"
+      className="relative mx-auto grid max-w-5xl items-center gap-12 overflow-hidden px-6 pb-24 pt-20 sm:pt-32 sm:pb-32 lg:grid-cols-[1.2fr_1fr]"
     >
       <Glow />
 
@@ -83,6 +84,10 @@ export function Hero() {
         </a>
       </motion.div>
       </motion.div>
+
+      <div className="flex justify-center lg:justify-center">
+        <TerminalCard />
+      </div>
     </section>
   )
 }
