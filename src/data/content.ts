@@ -1,3 +1,9 @@
+import klemwebLogo from '../assets/logos/klemweb.png'
+import lloydsLogo from '../assets/logos/lloyds.jpg'
+import nhsLogo from '../assets/logos/nhs.jpg'
+import nihrLogo from '../assets/logos/nihr.png'
+import sickleShieldLogo from '../assets/logos/sickle-shield.webp'
+
 export const profile = {
   name: 'Hamza Wakili',
   title: 'Cybersecurity Engineer & Digital Health Founder',
@@ -28,6 +34,7 @@ export const experience: ExperienceEntry[] = [
     org: 'Chief Security Office (CSO), Lloyds Banking Group',
     period: 'July 2026 – Present',
     current: true,
+    logo: lloydsLogo,
     bullets: [
       'Engineer and maintain enterprise Mac endpoint-security capability (Jamf Protect), including Jamf Pro environment configuration and secure deployment tooling.',
       'Design and support enterprise security-awareness initiatives, including phishing-simulation campaigns and their supporting automation.',
@@ -41,6 +48,7 @@ export const experience: ExperienceEntry[] = [
     period: '2026 – Present',
     current: true,
     url: 'https://www.sickleshield.com',
+    logo: sickleShieldLogo,
     bullets: [
       'Founded and lead a digital health organisation for sickle cell disease (SCD) management, now supporting 100+ warriors and families with crisis prevention tools, health education, and peer community.',
       'Designed and built the Sickle Shield app end-to-end: a native SwiftUI iOS app (crisis tracking with pain-trend history, medication reminders, medical report storage, and a live-location SOS flow) backed by a Node.js/Express/Prisma REST API.',
@@ -52,6 +60,7 @@ export const experience: ExperienceEntry[] = [
     role: 'Cyber Security Analyst (VAPT)',
     org: 'Klemweb (Internship)',
     period: 'May 2025 – July 2025',
+    logo: klemwebLogo,
     bullets: [
       'Conducted Vulnerability and Penetration Testing on web apps and networks, identifying 15+ high-risk vulnerabilities.',
       'Conducted threat hunting and analysis using Microsoft Defender Advanced Threat Protection (ATP), investigating endpoint behaviour and producing actionable security reports for stakeholders.',
@@ -59,13 +68,13 @@ export const experience: ExperienceEntry[] = [
     ],
   },
   {
-    role: 'Graduate IT & Technical Roles',
-    org: 'Apple & Computacenter',
-    period: 'October 2023 – October 2025',
+    role: 'Technical Support Specialist',
+    org: 'Apple',
+    period: 'August 2022 – August 2024',
     bullets: [
-      'Technical Support Specialist (Apple) and IT Analyst (Computacenter) managing enterprise operating systems, hardware diagnostics, and IT service management (ITSM).',
-      'Handled 400+ support requests monthly and managed Active Directory accounts across multiple client sites.',
-      'Built foundational experience in threat exposure, user access management, and hardware/software security protocols.',
+      'Resolved 30+ Apple hardware and software support tickets daily, delivering installations, troubleshooting, and personalised product demonstrations that showcased ecosystem benefits.',
+      'Trained customers on device setup, data transfer, and security best practices, and guided product selection by aligning technical features with user needs.',
+      'Partnered with store leadership to optimise sales displays and brand consistency, consistently exceeding monthly sales targets through consultative selling.',
     ],
   },
 ]
@@ -83,6 +92,7 @@ export const research: ResearchEntry[] = [
     role: 'Patient and Public Involvement (PPIE) Contributor & Co-Author',
     org: 'National Institute for Health and Care Research (NIHR) & The University of Manchester',
     period: 'March 2026 – Present',
+    logo: nihrLogo,
     bullets: [
       'Act as technical advisor and co-author on the national study "Sickle Cell Voices for Healthcare Transition."',
       'Co-designed the "Wheel of Culture" systems framework to guide NHS transition research.',
@@ -93,6 +103,7 @@ export const research: ResearchEntry[] = [
     role: 'Sickle Cell Working Group for Schools — Member',
     org: 'NHS England, Sickle Cell and Thalassaemia Quality Improvement Programme',
     period: 'August 2025 – Present',
+    logo: nhsLogo,
     bullets: [
       'Invited by NHS England’s Sickle Cell & Thalassaemia Clinical Fellow after she identified Sickle Shield during a national review of applicants, to explore collaboration between the charity and NHS England’s education programme.',
       'Selected to join the Sickle Cell Working Group for Schools, contributing alongside affected individuals, patients, carers, educators and healthcare professionals to develop national resources supporting pupils with the condition.',
@@ -182,7 +193,7 @@ export const certifications = [
 export const highlights = [
   { stat: '15+', label: 'High-risk vulnerabilities identified in VAPT engagements' },
   { stat: '100+', label: 'Warriors & families supported by Sickle Shield, the charity I founded and built' },
-  { stat: '400+', label: 'Enterprise support requests resolved monthly' },
+  { stat: '30+', label: 'Apple support tickets resolved daily, troubleshooting hardware and software' },
   { stat: 'Nat’l', label: 'Co-author on NIHR-backed research, presented at ASCAT 2026' },
 ]
 
