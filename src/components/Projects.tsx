@@ -40,7 +40,7 @@ function ProjectCard({
               <ArrowUpRight size={14} />
             </a>
           ) : (
-            <span className="text-xs text-text-muted">Academic</span>
+            <span className="text-xs text-text-muted">{project.source}</span>
           )}
         </div>
 

@@ -28,9 +28,10 @@ export const experience: ExperienceEntry[] = [
     period: 'July 2026 – Present',
     current: true,
     bullets: [
-      'Secure and manage enterprise infrastructure and endpoint security controls across the organisation’s device estate.',
-      'Utilise Microsoft enterprise security architectures — Microsoft Defender for Endpoint, Microsoft Intune, and Microsoft Entra ID (Azure AD) — to enforce security baselines and access controls.',
-      'Collaborate within the CSO to improve overall organisational security posture and deploy proactive endpoint protection measures.',
+      'Engineered foundations for an enterprise Mac endpoint-security capability (Jamf Protect) — set up the team’s repository and workspace, established Jamf Pro development/test connectivity, and built configuration-profile management through a Go SDK and Terraform workflow.',
+      'Designed the phishing-simulation payload selected for a Q3 enterprise security-awareness campaign, and supported its controlled rollout, validation and monitoring.',
+      'Led engineering work to automate the phishing-simulation lifecycle, provisioning GCP infrastructure and producing technical documentation used by other engineers to design the pipeline’s data layer.',
+      'Applied Infrastructure-as-Code practices to map security policies into Terraform modules and supported telemetry development to validate DLP risk — while mentoring a colleague through their first GitHub repository and contributing to the team’s engineering onboarding guide.',
     ],
   },
   {
@@ -117,11 +118,14 @@ export const skills = {
     'Vulnerability Assessment (VAPT)',
     'DevSecOps',
     'Threat Hunting',
+    'Infrastructure as Code (Terraform)',
   ],
   'Enterprise Tooling': [
     'Microsoft Defender for Endpoint',
     'Microsoft Intune',
     'Azure AD / Entra ID',
+    'Jamf Protect / Jamf Pro',
+    'Google Cloud Platform (GCP)',
     'IAM',
     'Active Directory',
   ],
@@ -132,6 +136,7 @@ export const skills = {
     'Kali Linux',
     'Nmap',
     'ISO/IEC 27005 Risk Assessment',
+    'DLP & Security Telemetry',
   ],
   'Health Tech & Product Engineering': [
     'SwiftUI (iOS)',
@@ -139,6 +144,7 @@ export const skills = {
     'Prisma / PostgreSQL',
     'REST API Design & JWT Auth',
     'Python',
+    'Go',
     'Bash Scripting',
   ],
 }
@@ -153,6 +159,8 @@ export const marqueeItems = [
   'Prisma / PostgreSQL',
   'ISO/IEC 27005',
   'Azure AD / Entra ID',
+  'Jamf Protect',
+  'Terraform',
   'Python',
   'Kali Linux',
   'Digital Health',
@@ -191,7 +199,7 @@ export type ProjectEntry = {
     | 'Health Tech'
   link?: string
   homepage?: string
-  source: 'GitHub' | 'Academic'
+  source: 'GitHub' | 'Academic' | 'Professional'
   featured?: boolean
 }
 
@@ -228,6 +236,16 @@ export const projects: ProjectEntry[] = [
     category: 'Cryptography',
     link: 'https://github.com/Hwakili/ChaCha20_Poly1305-Secure-Storage',
     source: 'GitHub',
+    featured: true,
+  },
+  {
+    title: 'Enterprise Mac Endpoint Security (Jamf Protect)',
+    period: '2026 – Present',
+    description:
+      'Engineering foundations for an enterprise Mac endpoint-security capability at a major UK bank: repository and workspace setup, Jamf Pro development/test connectivity, and configuration-profile management through a Go SDK and Terraform workflow — supporting telemetry-driven DLP risk validation across a phased device rollout.',
+    tags: ['Jamf Protect', 'Terraform', 'Go', 'DLP', 'Infrastructure as Code'],
+    category: 'Security',
+    source: 'Professional',
     featured: true,
   },
   {
