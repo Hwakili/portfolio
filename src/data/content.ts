@@ -15,7 +15,7 @@ export const profile = {
   github: 'https://github.com/Hwakili',
   linkedin: 'https://www.linkedin.com/in/hamza-w-97577a139/',
   summary:
-    'Cybersecurity engineer specialising in endpoint security and enterprise infrastructure, currently protecting a major UK bank’s device estate. Alongside that, I founded and run Sickle Shield, a registered UK charity building digital health tools for sickle cell patients — and I contribute as a technical co-author to national NIHR research on sickle cell care.',
+    'Cybersecurity engineer specialising in endpoint security and enterprise infrastructure, currently protecting a major UK bank’s device estate. Alongside that, I founded and run Sickle Shield, a registered UK charity building digital health tools for sickle cell patients, and I contribute as a technical co-author to national NIHR research on sickle cell care.',
 }
 
 export type ExperienceEntry = {
@@ -52,7 +52,7 @@ export const experience: ExperienceEntry[] = [
     bullets: [
       'Founded and lead a digital health organisation for sickle cell disease (SCD) management, now supporting 100+ warriors and families with crisis prevention tools, health education, and peer community.',
       'Designed and built the Sickle Shield app end-to-end: a native SwiftUI iOS app (crisis tracking with pain-trend history, medication reminders, medical report storage, and a live-location SOS flow) backed by a Node.js/Express/Prisma REST API.',
-      'Security-hardened the backend as both founder and engineer — fixing IDOR vulnerabilities, removing hardcoded secrets, and correcting data-modelling flaws in crisis-logging — applying the same VAPT discipline from my day job to my own product.',
+      'Security-hardened the backend as both founder and engineer, fixing IDOR vulnerabilities, removing hardcoded secrets, and correcting data-modelling flaws in crisis-logging, applying the same VAPT discipline from my day job to my own product.',
       'Drive product strategy, fundraising, and compliance (data protection for health records) as CEO, while writing the majority of the codebase myself.',
     ],
   },
@@ -100,7 +100,7 @@ export const research: ResearchEntry[] = [
     ],
   },
   {
-    role: 'Sickle Cell Working Group for Schools — Member',
+    role: 'Sickle Cell Working Group for Schools (Member)',
     org: 'NHS England, Sickle Cell and Thalassaemia Quality Improvement Programme',
     period: 'August 2025 – Present',
     logo: nhsLogo,
@@ -190,13 +190,6 @@ export const certifications = [
   'CEH (In Progress)',
 ]
 
-export const highlights = [
-  { stat: '15+', label: 'High-risk vulnerabilities identified in VAPT engagements' },
-  { stat: '100+', label: 'Warriors & families supported by Sickle Shield, the charity I founded and built' },
-  { stat: '30+', label: 'Apple support tickets resolved daily, troubleshooting hardware and software' },
-  { stat: 'Nat’l', label: 'Co-author on NIHR-backed research, presented at ASCAT 2026' },
-]
-
 export type ProjectEntry = {
   title: string
   period: string
@@ -218,10 +211,10 @@ export type ProjectEntry = {
 
 export const projects: ProjectEntry[] = [
   {
-    title: 'Sickle Shield — iOS App & Backend',
+    title: 'Sickle Shield: iOS App & Backend',
     period: '2026 – Present',
     description:
-      'The product behind the charity I founded: a native SwiftUI companion app for people living with sickle cell disease, backed by a Node.js/Express/Prisma REST API. Crisis tracking with pain-trend history, medication reminders, medical report storage, and a live-location emergency SOS flow. I wrote the majority of the codebase and security-hardened the backend — fixing IDOR vulnerabilities and removing hardcoded secrets.',
+      'The product behind the charity I founded: a native SwiftUI companion app for people living with sickle cell disease, backed by a Node.js/Express/Prisma REST API. Crisis tracking with pain-trend history, medication reminders, medical report storage, and a live-location emergency SOS flow. I wrote the majority of the codebase and security-hardened the backend, fixing IDOR vulnerabilities and removing hardcoded secrets.',
     tags: ['SwiftUI', 'Node.js', 'Prisma', 'PostgreSQL', 'Security Hardening'],
     category: 'Health Tech',
     link: 'https://github.com/SickleShield-lab/sickle-shield-app',
@@ -233,7 +226,7 @@ export const projects: ProjectEntry[] = [
     title: 'AI for Fraud Detection in Financial Transactions',
     period: '2026',
     description:
-      'MSc dissertation developing and critically comparing AI models — Logistic Regression, Random Forest, XGBoost, and a custom ResNeXt-embedded GRU architecture — for detecting fraudulent card transactions under severe class imbalance, with explainability via SHAP/LIME and a focus on real-time deployment feasibility.',
+      'MSc dissertation developing and critically comparing AI models (Logistic Regression, Random Forest, XGBoost, and a custom ResNeXt-embedded GRU architecture) for detecting fraudulent card transactions under severe class imbalance, with explainability via SHAP/LIME and a focus on real-time deployment feasibility.',
     tags: ['Python', 'XGBoost', 'Deep Learning', 'SHAP/LIME'],
     category: 'AI/ML',
     link: 'https://github.com/Hwakili/ai-financial-fraud-detection',
@@ -255,7 +248,7 @@ export const projects: ProjectEntry[] = [
     title: 'Enterprise Mac Endpoint Security (Jamf Protect)',
     period: '2026 – Present',
     description:
-      'Engineering foundations for an enterprise Mac endpoint-security capability at a major UK bank: repository and workspace setup, Jamf Pro development/test connectivity, and configuration-profile management through a Go SDK and Terraform workflow — supporting telemetry-driven DLP risk validation across a phased device rollout.',
+      'Engineering foundations for an enterprise Mac endpoint-security capability at a major UK bank: repository and workspace setup, Jamf Pro development/test connectivity, and configuration-profile management through a Go SDK and Terraform workflow, supporting telemetry-driven DLP risk validation across a phased device rollout.',
     tags: ['Jamf Protect', 'Terraform', 'Go', 'DLP', 'Infrastructure as Code'],
     category: 'Security',
     source: 'Professional',
@@ -265,7 +258,7 @@ export const projects: ProjectEntry[] = [
     title: 'Enterprise Phishing Simulation Campaign',
     period: '2026',
     description:
-      'Designed the phishing-simulation payload selected for a Q3 enterprise security-awareness campaign at a major UK bank, and supported its controlled rollout, validation and monitoring — testing employee resilience against social-engineering attacks under real operational conditions.',
+      'Designed the phishing-simulation payload selected for a Q3 enterprise security-awareness campaign at a major UK bank, and supported its controlled rollout, validation and monitoring, testing employee resilience against social-engineering attacks under real operational conditions.',
     tags: ['Phishing Simulation', 'Security Awareness', 'Social Engineering'],
     category: 'Security',
     source: 'Professional',
@@ -274,7 +267,7 @@ export const projects: ProjectEntry[] = [
     title: 'Phishing Simulation Automation',
     period: '2026 – Present',
     description:
-      'Leading engineering work to automate the phishing-simulation lifecycle: provisioning Google Cloud Platform infrastructure and service accounts, and producing technical documentation used by other engineers to design the pipeline’s data layer — reducing manual handling of simulation data.',
+      'Leading engineering work to automate the phishing-simulation lifecycle: provisioning Google Cloud Platform infrastructure and service accounts, and producing technical documentation used by other engineers to design the pipeline’s data layer, reducing manual handling of simulation data.',
     tags: ['GCP', 'DevSecOps', 'Automation', 'Technical Documentation'],
     category: 'Security',
     source: 'Professional',
@@ -283,23 +276,23 @@ export const projects: ProjectEntry[] = [
     title: 'ISMS Risk Assessment Report (ISO/IEC 27005:2018)',
     period: '2023',
     description:
-      'Built an Information Security Management System risk assessment for a simulated financial institution — asset identification, threat/risk analysis, and treatment planning — with incident response strategies to strengthen compliance and security culture.',
+      'Built an Information Security Management System risk assessment for a simulated financial institution (asset identification, threat/risk analysis, and treatment planning) with incident response strategies to strengthen compliance and security culture.',
     tags: ['ISO/IEC 27005', 'Risk Assessment', 'Compliance'],
     category: 'Security',
     source: 'Academic',
   },
   {
-    title: 'HackLab: Vulnix — Boot-to-Root Penetration Test',
+    title: 'HackLab Vulnix: Boot-to-Root Penetration Test',
     period: '2025',
     description:
-      'Full penetration test of the Vulnix VulnHub machine: service enumeration, exploitation of NFS misconfigurations to gain an initial foothold, and privilege escalation to root — replicating real-world Linux attack paths end to end.',
+      'Full penetration test of the Vulnix VulnHub machine: service enumeration, exploitation of NFS misconfigurations to gain an initial foothold, and privilege escalation to root, replicating real-world Linux attack paths end to end.',
     tags: ['Kali Linux', 'Enumeration', 'Privilege Escalation'],
     category: 'Security',
     link: 'https://github.com/Hwakili/Hacklab-Vulnix',
     source: 'GitHub',
   },
   {
-    title: 'Penetration Test — Starlink / SpaceX Infrastructure',
+    title: 'Penetration Test: Starlink / SpaceX Infrastructure',
     period: '2022',
     description:
       'Assessed the security posture of Starlink’s satellite internet infrastructure through network and system scans, exploit attempts against identified weaknesses, and a report of actionable hardening recommendations.',
@@ -308,7 +301,7 @@ export const projects: ProjectEntry[] = [
     source: 'Academic',
   },
   {
-    title: 'Social Engineering — Credential Harvesting Simulation',
+    title: 'Social Engineering: Credential Harvesting Simulation',
     period: '2025',
     description:
       'Simulated a phishing-based credential harvesting attack using the Social-Engineer Toolkit (SET) on Kali Linux, demonstrating how attackers exploit human trust and documenting the technique for defensive awareness training.',
@@ -321,7 +314,7 @@ export const projects: ProjectEntry[] = [
     title: 'Digital Forensics: Forensic Case Study Investigation',
     period: '2023',
     description:
-      'Forensic analysis of a simulated cybercrime case — recovering deleted files, tracing data footprints, and identifying perpetrators using EnCase, Autopsy, VeraCrypt, OpenStego, Sonic Visualiser, and VMware — reported to professional evidentiary standards.',
+      'Forensic analysis of a simulated cybercrime case, recovering deleted files, tracing data footprints, and identifying perpetrators using EnCase, Autopsy, VeraCrypt, OpenStego, Sonic Visualiser, and VMware, reported to professional evidentiary standards.',
     tags: ['EnCase', 'Autopsy', 'VeraCrypt'],
     category: 'Forensics',
     source: 'Academic',
@@ -330,13 +323,13 @@ export const projects: ProjectEntry[] = [
     title: 'Dissertation: The Role of AI in Cyber Security',
     period: '2023',
     description:
-      'BSc dissertation examining AI’s role in threat detection and automated defence, weighed against ethical concerns, data privacy, and adversarial AI risks — proposing strategies for safer AI-driven security systems.',
+      'BSc dissertation examining AI’s role in threat detection and automated defence, weighed against ethical concerns, data privacy, and adversarial AI risks, proposing strategies for safer AI-driven security systems.',
     tags: ['Academic Research', 'AI Ethics'],
     category: 'AI/ML',
     source: 'Academic',
   },
   {
-    title: 'Double Error Correction — BCH(10,6)',
+    title: 'Double Error Correction: BCH(10,6)',
     period: '2022',
     description:
       'Python implementation of a BCH(10,6) error-correction codec: a generator that appends check digits to a codeword, and a decoder that detects and corrects single and double bit errors for data-integrity guarantees.',
@@ -345,7 +338,7 @@ export const projects: ProjectEntry[] = [
     source: 'Academic',
   },
   {
-    title: 'Wister Wipers — Business Venture',
+    title: 'Wister Wipers: Business Venture',
     period: '2022 – 2023',
     description:
       'Co-led an 8-month venture-building project from concept to investor pitch: a smartphone-controlled portable heater for older vehicles, including a working prototype, business model canvas, pitch deck, and final investor presentation.',

@@ -2,7 +2,6 @@ import { BackgroundField } from './components/BackgroundField'
 import { Contact } from './components/Contact'
 import { Experience } from './components/Experience'
 import { Hero } from './components/Hero'
-import { Highlights } from './components/Highlights'
 import { Marquee } from './components/Marquee'
 import { Nav } from './components/Nav'
 import { Projects } from './components/Projects'
@@ -17,7 +16,6 @@ function App() {
       <main>
         <Hero />
         <Marquee />
-        <Highlights />
         <Experience />
         <Projects />
         <Research />
