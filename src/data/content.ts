@@ -37,10 +37,10 @@ export const experience: ExperienceEntry[] = [
     current: true,
     logo: lloydsLogo,
     bullets: [
-      'Engineer and maintain enterprise Mac endpoint-security capability (Jamf Protect), including Jamf Pro environment configuration and secure deployment tooling.',
-      'Design and support enterprise security-awareness initiatives, including phishing-simulation campaigns and their supporting automation.',
-      'Apply Infrastructure-as-Code practices (Terraform, Go) to translate security requirements into repeatable, testable configuration.',
-      'Support team capability through technical documentation, mentoring a colleague through their first GitHub repository, and contributing to the team’s engineering onboarding guide.',
+      'Advise engineering and risk stakeholders on enterprise endpoint security, translating technical findings into clear, risk-based recommendations across a major UK bank’s device estate.',
+      'Lead and support security-awareness initiatives, including phishing-simulation programmes, to reduce organisational exposure to social-engineering risk.',
+      'Apply secure-by-design and Infrastructure-as-Code principles to deliver repeatable, auditable security controls, partnering with engineering teams to embed security into delivery.',
+      'Build security capability across the team through mentoring, technical documentation, and engineering onboarding materials.',
     ],
   },
   {
