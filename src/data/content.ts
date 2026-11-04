@@ -28,10 +28,10 @@ export const experience: ExperienceEntry[] = [
     period: 'July 2026 – Present',
     current: true,
     bullets: [
-      'Engineered foundations for an enterprise Mac endpoint-security capability (Jamf Protect) — set up the team’s repository and workspace, established Jamf Pro development/test connectivity, and built configuration-profile management through a Go SDK and Terraform workflow.',
-      'Designed the phishing-simulation payload selected for a Q3 enterprise security-awareness campaign, and supported its controlled rollout, validation and monitoring.',
-      'Led engineering work to automate the phishing-simulation lifecycle, provisioning GCP infrastructure and producing technical documentation used by other engineers to design the pipeline’s data layer.',
-      'Applied Infrastructure-as-Code practices to map security policies into Terraform modules and supported telemetry development to validate DLP risk — while mentoring a colleague through their first GitHub repository and contributing to the team’s engineering onboarding guide.',
+      'Engineer and maintain enterprise Mac endpoint-security capability (Jamf Protect), including Jamf Pro environment configuration and secure deployment tooling.',
+      'Design and support enterprise security-awareness initiatives, including phishing-simulation campaigns and their supporting automation.',
+      'Apply Infrastructure-as-Code practices (Terraform, Go) to translate security requirements into repeatable, testable configuration.',
+      'Support team capability through technical documentation, mentoring a colleague through their first GitHub repository, and contributing to the team’s engineering onboarding guide.',
     ],
   },
   {
@@ -247,6 +247,24 @@ export const projects: ProjectEntry[] = [
     category: 'Security',
     source: 'Professional',
     featured: true,
+  },
+  {
+    title: 'Enterprise Phishing Simulation Campaign',
+    period: '2026',
+    description:
+      'Designed the phishing-simulation payload selected for a Q3 enterprise security-awareness campaign at a major UK bank, and supported its controlled rollout, validation and monitoring — testing employee resilience against social-engineering attacks under real operational conditions.',
+    tags: ['Phishing Simulation', 'Security Awareness', 'Social Engineering'],
+    category: 'Security',
+    source: 'Professional',
+  },
+  {
+    title: 'Phishing Simulation Automation',
+    period: '2026 – Present',
+    description:
+      'Leading engineering work to automate the phishing-simulation lifecycle: provisioning Google Cloud Platform infrastructure and service accounts, and producing technical documentation used by other engineers to design the pipeline’s data layer — reducing manual handling of simulation data.',
+    tags: ['GCP', 'DevSecOps', 'Automation', 'Technical Documentation'],
+    category: 'Security',
+    source: 'Professional',
   },
   {
     title: 'ISMS Risk Assessment Report (ISO/IEC 27005:2018)',
