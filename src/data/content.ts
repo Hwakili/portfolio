@@ -19,6 +19,7 @@ export type ExperienceEntry = {
   bullets: string[]
   current?: boolean
   url?: string
+  logo?: string
 }
 
 export const experience: ExperienceEntry[] = [
@@ -74,6 +75,7 @@ export type ResearchEntry = {
   org: string
   period: string
   bullets: string[]
+  logo?: string
 }
 
 export const research: ResearchEntry[] = [

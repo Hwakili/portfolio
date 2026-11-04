@@ -24,7 +24,7 @@ export function Research() {
           >
             <CornerBrackets />
             <div className="flex items-center gap-4">
-              <OrgBadge name={item.org} index={i + 1} />
+              <OrgBadge name={item.org} index={i + 1} logo={item.logo} />
               <div className="flex flex-1 flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h3 className="text-xl font-bold text-heading sm:text-2xl">{item.role}</h3>
                 <span className="font-mono text-xs text-text-muted">{item.period}</span>
