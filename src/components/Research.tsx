@@ -11,7 +11,7 @@ export function Research() {
         <Reveal>
           <SectionHeading
             eyebrow="Impact"
-            title="Academic Collaboration & Research"
+            title="Collaboration & Research"
             index="03"
           />
         </Reveal>

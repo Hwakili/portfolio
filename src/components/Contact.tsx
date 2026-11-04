@@ -28,6 +28,13 @@ export function Contact() {
             {profile.email}
           </a>
           <a
+            href={`mailto:${profile.workEmail}`}
+            className="inline-flex items-center gap-2 rounded-full border-2 border-border px-6 py-3 text-sm font-bold uppercase tracking-wide text-heading transition-colors hover:border-accent hover:text-accent"
+          >
+            <Mail size={16} />
+            {profile.workEmail}
+          </a>
+          <a
             href={`tel:${profile.phone.replace(/\s/g, '')}`}
             className="inline-flex items-center gap-2 rounded-full border-2 border-border px-6 py-3 text-sm font-bold uppercase tracking-wide text-heading transition-colors hover:border-accent hover:text-accent"
           >

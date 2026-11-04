@@ -11,7 +11,8 @@ export const profile = {
     'Securing enterprise infrastructure by day, building MedTech for sickle cell patients by calling.',
   location: 'United Kingdom',
   email: 'Hamza.Wakili@outlook.com',
-  phone: '+44 7577 637432',
+  workEmail: 'Hamza.Wakili@sickleshield.com',
+  phone: '07877 755345',
   github: 'https://github.com/Hwakili',
   linkedin: 'https://www.linkedin.com/in/hamza-w-97577a139/',
   summary:
