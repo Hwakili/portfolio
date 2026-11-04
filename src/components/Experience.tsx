@@ -12,12 +12,18 @@ export function Experience() {
 
       <div className="space-y-10 border-l-2 border-border pl-8">
         {experience.map((item, i) => (
-          <Reveal key={item.role + item.org} delay={i * 0.05} className="relative">
+          <Reveal key={item.role + item.org} delay={i * 0.05} className="relative overflow-hidden">
             <span
               className={`absolute -left-[41px] top-1 h-4 w-4 rounded-full border-2 border-bg ${
                 item.current ? 'bg-accent' : 'bg-border'
               }`}
             />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-2 -top-6 select-none text-8xl font-black text-heading opacity-[0.04] sm:text-9xl"
+            >
+              {String(i + 1).padStart(2, '0')}
+            </span>
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
               <h3 className="text-xl font-bold text-heading sm:text-2xl">{item.role}</h3>
               <span className="font-mono text-xs text-text-muted">{item.period}</span>

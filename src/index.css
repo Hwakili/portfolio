@@ -12,6 +12,7 @@
   --color-heading: #f5f7fa;
   --color-accent: #4ee1b0;
   --color-accent-soft: rgba(78, 225, 176, 0.12);
+  --color-accent-2: #38bdf8;
 }
 
 html {
@@ -29,4 +30,24 @@ body {
 ::selection {
   background: var(--color-accent-soft);
   color: var(--color-accent);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-accent), var(--color-accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
 }

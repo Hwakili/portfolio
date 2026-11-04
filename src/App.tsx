@@ -2,6 +2,7 @@ import { Contact } from './components/Contact'
 import { Experience } from './components/Experience'
 import { Hero } from './components/Hero'
 import { Highlights } from './components/Highlights'
+import { Marquee } from './components/Marquee'
 import { Nav } from './components/Nav'
 import { Projects } from './components/Projects'
 import { Research } from './components/Research'
@@ -13,6 +14,7 @@ function App() {
       <Nav />
       <main>
         <Hero />
+        <Marquee />
         <Highlights />
         <Experience />
         <Projects />

@@ -133,6 +133,21 @@ export const skills = {
   ],
 }
 
+export const marqueeItems = [
+  'Endpoint Security',
+  'Penetration Testing',
+  'Threat Hunting',
+  'Microsoft Defender',
+  'SwiftUI',
+  'Node.js',
+  'Prisma / PostgreSQL',
+  'ISO/IEC 27005',
+  'Azure AD / Entra ID',
+  'Python',
+  'Kali Linux',
+  'Digital Health',
+]
+
 export const certifications = [
   'Jamf Certified Associate',
   'SOC Level 1 (TryHackMe)',

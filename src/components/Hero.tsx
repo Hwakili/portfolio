@@ -1,17 +1,28 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDown, Mail } from 'lucide-react'
+import { useRef } from 'react'
 import { profile } from '../data/content'
 import { Glow } from './Glow'
 import { RoleCycle } from './RoleCycle'
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  })
+  const y = useTransform(scrollYProgress, [0, 1], [0, 80])
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
+
   return (
     <section
       id="top"
+      ref={sectionRef}
       className="relative mx-auto flex max-w-5xl flex-col justify-center overflow-hidden px-6 pb-24 pt-20 sm:pt-32 sm:pb-32"
     >
       <Glow />
 
+      <motion.div style={{ y, opacity }}>
       <motion.p
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
@@ -29,7 +40,7 @@ export function Hero() {
       >
         Hamza
         <br />
-        Wakili
+        <span className="text-gradient">Wakili</span>
       </motion.h1>
 
       <motion.p
@@ -70,6 +81,7 @@ export function Hero() {
           View experience
           <ArrowDown size={16} />
         </a>
+      </motion.div>
       </motion.div>
     </section>
   )

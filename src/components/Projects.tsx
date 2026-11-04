@@ -3,12 +3,21 @@ import { projects } from '../data/content'
 import { GithubIcon } from './icons'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
+import { TiltCard } from './TiltCard'
 
-function ProjectCard({ project, delay }: { project: (typeof projects)[number]; delay: number }) {
+function ProjectCard({
+  project,
+  delay,
+  span,
+}: {
+  project: (typeof projects)[number]
+  delay: number
+  span?: string
+}) {
   return (
-    <Reveal delay={delay}>
-      <div
-        className={`group flex h-full flex-col rounded-2xl border border-border p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_0_30px_-10px_var(--color-accent)] ${
+    <Reveal delay={delay} className={span}>
+      <TiltCard
+        className={`group flex h-full flex-col rounded-2xl border border-border p-6 transition-colors duration-300 hover:border-accent hover:shadow-[0_0_30px_-10px_var(--color-accent)] ${
           project.featured ? 'bg-bg-elevated' : ''
         }`}
       >
@@ -58,7 +67,7 @@ function ProjectCard({ project, delay }: { project: (typeof projects)[number]; d
             {project.homepage.replace(/^https?:\/\//, '')}
           </a>
         )}
-      </div>
+      </TiltCard>
     </Reveal>
   )
 }
@@ -75,7 +84,12 @@ export function Projects() {
 
       <div className="grid gap-6 sm:grid-cols-3">
         {featured.map((project, i) => (
-          <ProjectCard key={project.title} project={project} delay={i * 0.05} />
+          <ProjectCard
+            key={project.title}
+            project={project}
+            delay={i * 0.05}
+            span={i === 0 ? 'sm:col-span-2' : undefined}
+          />
         ))}
       </div>
 
