@@ -10,6 +10,7 @@ export function Research() {
           <SectionHeading
             eyebrow="Impact"
             title="Academic Collaboration & Research"
+            index="03"
           />
         </Reveal>
 
@@ -17,10 +18,10 @@ export function Research() {
           <Reveal
             key={item.role}
             delay={i * 0.05}
-            className="rounded-2xl border border-border bg-bg p-6 sm:p-8"
+            className="rounded-2xl border border-border bg-bg p-6 transition-colors hover:border-accent sm:p-8"
           >
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <h3 className="text-lg font-medium text-heading">{item.role}</h3>
+              <h3 className="text-xl font-bold text-heading sm:text-2xl">{item.role}</h3>
               <span className="font-mono text-xs text-text-muted">{item.period}</span>
             </div>
             <p className="mt-1 text-sm text-accent">{item.org}</p>

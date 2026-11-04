@@ -10,8 +10,8 @@ export function Contact() {
       className="border-t border-border bg-bg-elevated px-6 py-24"
     >
       <Reveal className="mx-auto max-w-2xl text-center">
-        <p className="font-mono text-sm text-accent">Get in touch</p>
-        <h2 className="mt-2 text-3xl font-semibold text-heading sm:text-4xl">
+        <p className="font-mono text-sm tracking-wide text-accent">05 / GET IN TOUCH</p>
+        <h2 className="mt-2 text-4xl font-bold uppercase leading-[0.95] tracking-tight text-heading sm:text-6xl">
           Let&apos;s work together
         </h2>
         <p className="mt-4 text-text-muted">
@@ -22,14 +22,14 @@ export function Contact() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-wide text-bg transition-transform hover:-translate-y-0.5"
           >
             <Mail size={16} />
             {profile.email}
           </a>
           <a
             href={`tel:${profile.phone.replace(/\s/g, '')}`}
-            className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-heading transition-colors hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-border px-6 py-3 text-sm font-bold uppercase tracking-wide text-heading transition-colors hover:border-accent hover:text-accent"
           >
             <Phone size={16} />
             {profile.phone}

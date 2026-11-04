@@ -17,7 +17,10 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-mono text-sm font-medium text-heading">
+        <a
+          href="#top"
+          className="font-mono text-sm font-bold uppercase tracking-wide text-heading"
+        >
           hamza<span className="text-accent">.wakili</span>
         </a>
 
@@ -26,7 +29,7 @@ export function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-text-muted transition-colors hover:text-heading"
+              className="text-xs font-medium uppercase tracking-wide text-text-muted transition-colors hover:text-accent"
             >
               {link.label}
             </a>
@@ -69,7 +72,7 @@ export function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-sm text-text-muted hover:text-heading"
+              className="text-sm font-medium uppercase tracking-wide text-text-muted hover:text-accent"
             >
               {link.label}
             </a>

@@ -8,7 +8,7 @@ function ProjectCard({ project, delay }: { project: (typeof projects)[number]; d
   return (
     <Reveal delay={delay}>
       <div
-        className={`flex h-full flex-col rounded-2xl border border-border p-6 ${
+        className={`group flex h-full flex-col rounded-2xl border border-border p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_0_30px_-10px_var(--color-accent)] ${
           project.featured ? 'bg-bg-elevated' : ''
         }`}
       >
@@ -32,7 +32,7 @@ function ProjectCard({ project, delay }: { project: (typeof projects)[number]; d
           )}
         </div>
 
-        <h3 className="mt-3 text-base font-medium text-heading">{project.title}</h3>
+        <h3 className="mt-3 text-lg font-semibold text-heading">{project.title}</h3>
         <p className="mt-1 font-mono text-xs text-text-muted">{project.period}</p>
         <p className="mt-3 flex-1 text-sm text-text-muted">{project.description}</p>
 
@@ -70,10 +70,7 @@ export function Projects() {
   return (
     <section id="projects" className="border-t border-border mx-auto max-w-5xl px-6 py-24">
       <Reveal>
-        <SectionHeading
-          eyebrow="Build & Break"
-          title="Projects"
-        />
+        <SectionHeading eyebrow="Build & Break" title="Projects" index="02" />
       </Reveal>
 
       <div className="grid gap-6 sm:grid-cols-3">

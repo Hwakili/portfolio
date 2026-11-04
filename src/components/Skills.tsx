@@ -9,6 +9,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="Capabilities"
           title="Technical Skills & Specialisms"
+          index="04"
         />
       </Reveal>
 
@@ -17,9 +18,11 @@ export function Skills() {
           <Reveal
             key={category}
             delay={i * 0.05}
-            className="rounded-2xl border border-border p-6"
+            className="rounded-2xl border border-border p-6 transition-colors hover:border-accent"
           >
-            <h3 className="font-mono text-sm text-accent">{category}</h3>
+            <h3 className="font-mono text-sm font-medium uppercase tracking-wide text-accent">
+              {category}
+            </h3>
             <div className="mt-4 flex flex-wrap gap-2">
               {items.map((item) => (
                 <span

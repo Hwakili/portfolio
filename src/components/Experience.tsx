@@ -7,19 +7,19 @@ export function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-5xl px-6 py-24">
       <Reveal>
-        <SectionHeading eyebrow="Career" title="Professional Experience" />
+        <SectionHeading eyebrow="Career" title="Professional Experience" index="01" />
       </Reveal>
 
-      <div className="space-y-10 border-l border-border pl-8">
+      <div className="space-y-10 border-l-2 border-border pl-8">
         {experience.map((item, i) => (
           <Reveal key={item.role + item.org} delay={i * 0.05} className="relative">
             <span
-              className={`absolute -left-[37px] top-1.5 h-3 w-3 rounded-full border-2 border-bg ${
+              className={`absolute -left-[41px] top-1 h-4 w-4 rounded-full border-2 border-bg ${
                 item.current ? 'bg-accent' : 'bg-border'
               }`}
             />
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <h3 className="text-lg font-medium text-heading">{item.role}</h3>
+              <h3 className="text-xl font-bold text-heading sm:text-2xl">{item.role}</h3>
               <span className="font-mono text-xs text-text-muted">{item.period}</span>
             </div>
             {item.url ? (

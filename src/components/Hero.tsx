@@ -58,14 +58,14 @@ export function Hero() {
       >
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+          className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-wide text-bg transition-transform hover:-translate-y-0.5"
         >
           <Mail size={16} />
           Get in touch
         </a>
         <a
           href="#experience"
-          className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-heading transition-colors hover:border-accent hover:text-accent"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-border px-6 py-3 text-sm font-bold uppercase tracking-wide text-heading transition-colors hover:border-accent hover:text-accent"
         >
           View experience
           <ArrowDown size={16} />
