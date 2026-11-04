@@ -1,5 +1,6 @@
 import { ArrowUpRight, Globe } from 'lucide-react'
 import { projects } from '../data/content'
+import { CornerBrackets } from './CornerBrackets'
 import { GithubIcon } from './icons'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
@@ -17,10 +18,11 @@ function ProjectCard({
   return (
     <Reveal delay={delay} className={span}>
       <TiltCard
-        className={`group flex h-full flex-col rounded-2xl border border-border p-6 transition-colors duration-300 hover:border-accent hover:shadow-[0_0_30px_-10px_var(--color-accent)] ${
+        className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border p-6 transition-colors duration-300 hover:border-accent hover:shadow-[0_0_30px_-10px_var(--color-accent)] ${
           project.featured ? 'bg-bg-elevated' : ''
         }`}
       >
+        <CornerBrackets />
         <div className="flex items-start justify-between gap-3">
           <span className="font-mono text-xs uppercase tracking-wide text-accent">
             {project.category}

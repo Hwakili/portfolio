@@ -1,6 +1,15 @@
+import { HeartPulse, Radar, Server, Shield } from 'lucide-react'
 import { certifications, education, skills } from '../data/content'
+import { CornerBrackets } from './CornerBrackets'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
+
+const categoryIcons: Record<string, typeof Shield> = {
+  'Security Architecture': Shield,
+  'Enterprise Tooling': Server,
+  'Security & Analysis': Radar,
+  'Health Tech & Product Engineering': HeartPulse,
+}
 
 export function Skills() {
   return (
@@ -14,15 +23,23 @@ export function Skills() {
       </Reveal>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        {Object.entries(skills).map(([category, items], i) => (
+        {Object.entries(skills).map(([category, items], i) => {
+          const Icon = categoryIcons[category] ?? Shield
+          return (
           <Reveal
             key={category}
             delay={i * 0.05}
-            className="rounded-2xl border border-border p-6 transition-colors hover:border-accent"
+            className="relative overflow-hidden rounded-2xl border border-border p-6 transition-colors hover:border-accent"
           >
-            <h3 className="font-mono text-sm font-medium uppercase tracking-wide text-accent">
-              {category}
-            </h3>
+            <CornerBrackets />
+            <div className="flex items-center gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
+                <Icon size={16} />
+              </span>
+              <h3 className="font-mono text-sm font-medium uppercase tracking-wide text-accent">
+                {category}
+              </h3>
+            </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {items.map((item) => (
                 <span
@@ -34,7 +51,8 @@ export function Skills() {
               ))}
             </div>
           </Reveal>
-        ))}
+          )
+        })}
       </div>
 
       <Reveal delay={0.1} className="mt-16">
