@@ -13,6 +13,9 @@
   --color-accent: #4ee1b0;
   --color-accent-soft: rgba(78, 225, 176, 0.12);
   --color-accent-2: #38bdf8;
+  --color-accent-3: #c084fc;
+  --color-accent-4: #fbbf24;
+  --color-accent-5: #fb7185;
 }
 
 html {
@@ -50,4 +53,38 @@ body {
 
 .animate-marquee {
   animation: marquee 28s linear infinite;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(var(--color-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+.tag-0 {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  color: var(--color-accent);
+  border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+.tag-1 {
+  background: color-mix(in srgb, var(--color-accent-2) 12%, transparent);
+  color: var(--color-accent-2);
+  border-color: color-mix(in srgb, var(--color-accent-2) 35%, transparent);
+}
+.tag-2 {
+  background: color-mix(in srgb, var(--color-accent-3) 12%, transparent);
+  color: var(--color-accent-3);
+  border-color: color-mix(in srgb, var(--color-accent-3) 35%, transparent);
+}
+.tag-3 {
+  background: color-mix(in srgb, var(--color-accent-4) 12%, transparent);
+  color: var(--color-accent-4);
+  border-color: color-mix(in srgb, var(--color-accent-4) 35%, transparent);
+}
+.tag-4 {
+  background: color-mix(in srgb, var(--color-accent-5) 12%, transparent);
+  color: var(--color-accent-5);
+  border-color: color-mix(in srgb, var(--color-accent-5) 35%, transparent);
 }

@@ -1,5 +1,6 @@
 import { HeartPulse, Radar, Server, Shield } from 'lucide-react'
 import { certifications, education, skills } from '../data/content'
+import { tagColor } from '../lib/palette'
 import { CornerBrackets } from './CornerBrackets'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
@@ -41,10 +42,10 @@ export function Skills() {
               </h3>
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
-              {items.map((item) => (
+              {items.map((item, j) => (
                 <span
                   key={item}
-                  className="rounded-full border border-border px-3 py-1 text-xs text-text-muted"
+                  className={`rounded-full border px-3 py-1 text-xs font-medium ${tagColor(j)}`}
                 >
                   {item}
                 </span>
@@ -73,10 +74,10 @@ export function Skills() {
           <div>
             <h3 className="mb-4 text-sm font-medium text-heading">Certifications</h3>
             <div className="flex flex-wrap gap-2">
-              {certifications.map((cert) => (
+              {certifications.map((cert, j) => (
                 <span
                   key={cert}
-                  className="rounded-full bg-accent-soft px-3 py-1 text-xs text-accent"
+                  className={`rounded-full border px-3 py-1 text-xs font-medium ${tagColor(j + 2)}`}
                 >
                   {cert}
                 </span>

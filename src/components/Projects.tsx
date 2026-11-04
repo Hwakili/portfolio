@@ -1,5 +1,6 @@
 import { ArrowUpRight, Globe } from 'lucide-react'
 import { projects } from '../data/content'
+import { tagColor } from '../lib/palette'
 import { CornerBrackets } from './CornerBrackets'
 import { GithubIcon } from './icons'
 import { Reveal } from './Reveal'
@@ -48,10 +49,10 @@ function ProjectCard({
         <p className="mt-3 flex-1 text-sm text-text-muted">{project.description}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
+          {project.tags.map((tag, j) => (
             <span
               key={tag}
-              className="rounded-full border border-border px-2.5 py-0.5 text-xs text-text-muted"
+              className={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${tagColor(j)}`}
             >
               {tag}
             </span>

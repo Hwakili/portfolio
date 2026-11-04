@@ -1,3 +1,4 @@
+import { BackgroundField } from './components/BackgroundField'
 import { Contact } from './components/Contact'
 import { Experience } from './components/Experience'
 import { Hero } from './components/Hero'
@@ -10,7 +11,8 @@ import { Skills } from './components/Skills'
 
 function App() {
   return (
-    <div className="min-h-screen bg-bg text-text">
+    <div className="min-h-screen text-text">
+      <BackgroundField />
       <Nav />
       <main>
         <Hero />
