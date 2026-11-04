@@ -1,13 +1,17 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, Mail } from 'lucide-react'
 import { profile } from '../data/content'
+import { Glow } from './Glow'
+import { RoleCycle } from './RoleCycle'
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative mx-auto flex max-w-5xl flex-col justify-center px-6 pb-24 pt-20 sm:pt-32 sm:pb-32"
+      className="relative mx-auto flex max-w-5xl flex-col justify-center overflow-hidden px-6 pb-24 pt-20 sm:pt-32 sm:pb-32"
     >
+      <Glow />
+
       <motion.p
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
@@ -21,15 +25,26 @@ export function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-heading sm:text-6xl"
+        className="mt-3 text-6xl font-bold uppercase leading-[0.95] tracking-tight text-heading sm:text-8xl"
       >
-        {profile.title}
+        Hamza
+        <br />
+        Wakili
       </motion.h1>
 
       <motion.p
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
+        className="mt-5 text-2xl font-medium leading-tight sm:text-4xl"
+      >
+        <RoleCycle />
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-6 max-w-2xl text-lg text-text-muted"
       >
         {profile.summary}
@@ -38,7 +53,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
         className="mt-10 flex flex-wrap items-center gap-4"
       >
         <a
