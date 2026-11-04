@@ -1,10 +1,9 @@
-import { ArrowUpRight, Bug, HeartPulse, Laptop2, ShieldCheck } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { experience } from '../data/content'
 import { CornerBrackets } from './CornerBrackets'
+import { OrgBadge } from './OrgBadge'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
-
-const roleIcons = [ShieldCheck, HeartPulse, Bug, Laptop2]
 
 export function Experience() {
   return (
@@ -14,9 +13,7 @@ export function Experience() {
       </Reveal>
 
       <div className="space-y-6">
-        {experience.map((item, i) => {
-          const Icon = roleIcons[i % roleIcons.length]
-          return (
+        {experience.map((item, i) => (
           <Reveal
             key={item.role + item.org}
             delay={i * 0.05}
@@ -30,13 +27,7 @@ export function Experience() {
               {String(i + 1).padStart(2, '0')}
             </span>
             <div className="flex items-center gap-4">
-              <span
-                className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${
-                  item.current ? 'bg-accent-soft text-accent' : 'bg-border text-text-muted'
-                }`}
-              >
-                <Icon size={20} />
-              </span>
+              <OrgBadge name={item.org} index={i} />
               <div className="flex flex-1 flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h3 className="text-xl font-bold text-heading sm:text-2xl">{item.role}</h3>
                 <span className="font-mono text-xs text-text-muted">{item.period}</span>
@@ -64,8 +55,7 @@ export function Experience() {
               ))}
             </ul>
           </Reveal>
-          )
-        })}
+        ))}
       </div>
     </section>
   )

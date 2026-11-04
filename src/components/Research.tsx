@@ -1,6 +1,6 @@
-import { Microscope } from 'lucide-react'
 import { research } from '../data/content'
 import { CornerBrackets } from './CornerBrackets'
+import { OrgBadge } from './OrgBadge'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
 
@@ -24,9 +24,7 @@ export function Research() {
           >
             <CornerBrackets />
             <div className="flex items-center gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
-                <Microscope size={20} />
-              </span>
+              <OrgBadge name={item.org} index={i + 1} />
               <div className="flex flex-1 flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h3 className="text-xl font-bold text-heading sm:text-2xl">{item.role}</h3>
                 <span className="font-mono text-xs text-text-muted">{item.period}</span>

@@ -1,10 +1,10 @@
 import { ArrowUpRight, Globe } from 'lucide-react'
 import { projects } from '../data/content'
-import { tagColor } from '../lib/palette'
 import { CornerBrackets } from './CornerBrackets'
 import { GithubIcon } from './icons'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
+import { TagBadge } from './TagBadge'
 import { TiltCard } from './TiltCard'
 
 function ProjectCard({
@@ -50,12 +50,7 @@ function ProjectCard({
 
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tags.map((tag, j) => (
-            <span
-              key={tag}
-              className={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${tagColor(j)}`}
-            >
-              {tag}
-            </span>
+            <TagBadge key={tag} label={tag} index={j} />
           ))}
         </div>
 
